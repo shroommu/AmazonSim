@@ -7,15 +7,20 @@ public class DroneData : MonoBehaviour {
 
 	public SO_Drone sO_Drone;
 	private NavMeshAgent agent; 
+	//public Transform dest;
 
 	void Start()
 	{
 		agent = GetComponent<NavMeshAgent>();
 	}
 
-	public void MoveNavMesh()
+	public void MoveNavMesh(int droneNum, Transform dest)
 	{
-		agent.destination = sO_Drone.sO_Package.pkgDestination.destTransform.position;
+		if (droneNum == sO_Drone.droneNumber)
+		{
+			agent.destination = dest.position;
+		}
+		
 	}
 
 }

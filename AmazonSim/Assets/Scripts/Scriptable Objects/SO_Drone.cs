@@ -7,6 +7,7 @@ public class SO_Drone : ScriptableObject {
 
 	public float maxFuel;
 	public float currentFuelLevel;
+	public int droneNumber;
 
 	public SO_Package sO_Package;
 

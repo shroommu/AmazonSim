@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxFuel: 0
   currentFuelLevel: 0
+  droneNumber: 1
   sO_Package: {fileID: 11400000, guid: 9c0fb4a19450be04ab53bc63a38a9122, type: 2}
