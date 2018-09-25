@@ -1,6 +1,6 @@
 sceneSetups:
 - path: Assets/Scenes/AlexaScene.unity
-  isLoaded: 0
+  isLoaded: 1
   isActive: 0
 - path: Assets/Scenes/UI_Master_Scene.unity
   isLoaded: 1
