@@ -14,13 +14,18 @@ public class MenuMethods : MonoBehaviour {
 
 	public bool isPopup = false;
 
+	public bool isCentered = true;
+
 	private MenuMethods tempActiveMenu;
 
     void Awake()
     {
 		//moves all menus to center of canvas so they can be moved anywhere in the scene view when editing
-        var rect = GetComponent<RectTransform>();
-        rect.anchoredPosition = new Vector2(0, 0);
+		if(isCentered)
+		{
+			var rect = GetComponent<RectTransform>();
+			rect.anchoredPosition = new Vector2(0, 0);
+		}
 
 		canvasGroup = GetComponent<CanvasGroup>();
 
@@ -54,6 +59,7 @@ public class MenuMethods : MonoBehaviour {
 		isOpen = true;
 		canvasGroup.blocksRaycasts = canvasGroup.interactable = true;
 		canvasGroup.alpha = 1;
+		print("Opening popup");
 	}
 
 	//makes tempActiveMenu (set in OpenPopup) interactable, makes this popup menu invisible and non-interactable
@@ -64,5 +70,6 @@ public class MenuMethods : MonoBehaviour {
 		isOpen = false;
 		canvasGroup.blocksRaycasts = canvasGroup.interactable = false;
 		canvasGroup.alpha = 0;
+		print("Closing popup");
 	}
 }

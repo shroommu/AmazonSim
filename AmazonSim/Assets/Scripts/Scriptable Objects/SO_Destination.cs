@@ -6,9 +6,8 @@ using UnityEngine;
 
 public class SO_Destination : ScriptableObject {
 
-	public Transform destTransform;
 	public string destName;
-	
 	public SO_Package destPkg;
+	public float distance;
 
 }
