@@ -143,17 +143,17 @@ MonoBehaviour:
   currentDrone: {fileID: 0}
   currentDestination: {fileID: 0}
   destinations:
-  - {fileID: 232361031}
   - {fileID: 1966332453}
   - {fileID: 1503808485}
+  - {fileID: 232361031}
   drones:
   - {fileID: 1957677357}
   - {fileID: 936406943}
   - {fileID: 418205230}
   warehousePads:
-  - {fileID: 402359622}
-  - {fileID: 1813413377}
   - {fileID: 800507463}
+  - {fileID: 1813413377}
+  - {fileID: 402359622}
 --- !u!224 &216404661
 RectTransform:
   m_ObjectHideFlags: 0
@@ -209,13 +209,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4994428462651426, guid: 0824bae37e2b7784692fab46c751be9d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114236177249368548, guid: 0824bae37e2b7784692fab46c751be9d,
         type: 2}
       propertyPath: warehouse
       value: 
       objectReference: {fileID: 1550745611}
+    - target: {fileID: 1604990097877394, guid: 0824bae37e2b7784692fab46c751be9d, type: 2}
+      propertyPath: m_Name
+      value: House (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0824bae37e2b7784692fab46c751be9d, type: 2}
   m_IsPrefabParent: 0
@@ -237,7 +241,7 @@ GameObject:
   - component: {fileID: 402359624}
   - component: {fileID: 402359623}
   m_Layer: 0
-  m_Name: DroneLandingStation(1)
+  m_Name: DroneLandingStation (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +259,7 @@ Transform:
   m_LocalScale: {x: 0.07334493, y: 0.3221739, z: 0.22136892}
   m_Children: []
   m_Father: {fileID: 1550745611}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &402359623
 BoxCollider:
@@ -394,7 +398,7 @@ GameObject:
   - component: {fileID: 800507465}
   - component: {fileID: 800507464}
   m_Layer: 0
-  m_Name: DroneLandingStation (2)
+  m_Name: DroneLandingStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,7 +416,7 @@ Transform:
   m_LocalScale: {x: 0.07334493, y: 0.3221739, z: 0.22136892}
   m_Children: []
   m_Father: {fileID: 1550745611}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &800507464
 BoxCollider:
@@ -725,11 +729,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4994428462651426, guid: 0824bae37e2b7784692fab46c751be9d, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1604990097877394, guid: 0824bae37e2b7784692fab46c751be9d, type: 2}
       propertyPath: m_Name
-      value: House (2)
+      value: House (1)
       objectReference: {fileID: 0}
     - target: {fileID: 114236177249368548, guid: 0824bae37e2b7784692fab46c751be9d,
         type: 2}
@@ -832,9 +836,9 @@ Transform:
   m_LocalPosition: {x: -11.42, y: 1.68, z: -15.74}
   m_LocalScale: {x: 13.634207, y: 3.103914, z: 4.517346}
   m_Children:
-  - {fileID: 402359622}
-  - {fileID: 1813413377}
   - {fileID: 800507463}
+  - {fileID: 1813413377}
+  - {fileID: 402359622}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1079,11 +1083,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4994428462651426, guid: 0824bae37e2b7784692fab46c751be9d, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1604990097877394, guid: 0824bae37e2b7784692fab46c751be9d, type: 2}
       propertyPath: m_Name
-      value: House (1)
+      value: House
       objectReference: {fileID: 0}
     - target: {fileID: 114236177249368548, guid: 0824bae37e2b7784692fab46c751be9d,
         type: 2}

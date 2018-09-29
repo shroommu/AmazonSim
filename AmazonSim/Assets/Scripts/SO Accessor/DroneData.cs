@@ -13,8 +13,8 @@ public class DroneData : MonoBehaviour {
 
 	public float agentSpeed = 3.5f;
     private float packageDropoffTime = 5;
-
 	private bool useFuelRunning = false;
+	private bool checkForPathRunning = false;
 
     void Start()
 	{
@@ -27,32 +27,52 @@ public class DroneData : MonoBehaviour {
 		{
 			NavMeshPath path = new NavMeshPath();
 			agent.CalculatePath(dest.position, path);
+
 			agent.speed = agentSpeed;
 			agent.isStopped = false;
 			agent.path = path;
+
 			inMotion = true;
 			atDest = false;
-			StartCoroutine(CheckForPath());
+
+			StartCoroutine(CheckForPath(false));
 			StartCoroutine(UseFuel());
 		}
 	}
 
-	IEnumerator CheckForPath()
+	IEnumerator CheckForPath(bool destIsWarehouse)
 	{
-		while(agent.remainingDistance > 0.3 && inMotion)
-		{
-			yield return null;
-		}
+		print("starting check for path");
 
-		if (inMotion == false)
+		if(!checkForPathRunning)
 		{
-			print("stopped");
-		}
-		else
-		{
-			atDest = true;
-			//inMotion = false;
-			StartCoroutine(DropOffPackage());
+			checkForPathRunning = true;
+
+			while(agent.remainingDistance > 0.3 && inMotion)
+			{
+				yield return null;
+			}
+
+			if (inMotion == false)
+			{
+				print("stopped");
+			}
+			else
+			{
+				atDest = true;
+				inMotion = false;
+				print("at destination");
+
+				if(!destIsWarehouse)
+				{
+					StartCoroutine(DropOffPackage());
+				}
+				else
+				{
+					StartCoroutine(Refuel());
+				}
+			}
+			checkForPathRunning = false;
 		}
 	}
 
@@ -92,10 +112,19 @@ public class DroneData : MonoBehaviour {
 		agent.path = path;
 		inMotion = true;
 		atDest = false;
-		StartCoroutine(CheckForPath());
+		StartCoroutine(CheckForPath(true));
 		StartCoroutine(UseFuel());
 	}
 
+
+	IEnumerator Refuel()
+	{
+		while (sO_Drone.currentFuelLevel < 100)
+		{
+			sO_Drone.currentFuelLevel++;
+			yield return new WaitForSeconds(1);
+		}
+	}
 
 
 }
