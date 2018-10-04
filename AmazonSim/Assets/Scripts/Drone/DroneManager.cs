@@ -9,6 +9,8 @@ public class DroneManager : MonoBehaviour {
 	public List<Transform> destinations;
 	public List<GameObject> drones;
 
+	public List<SO_Package> packages;
+
 	public List<Transform> warehousePads;
 
 	public void Dispatch()

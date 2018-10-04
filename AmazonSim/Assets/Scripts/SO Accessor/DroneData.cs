@@ -10,6 +10,7 @@ public class DroneData : MonoBehaviour {
 	private NavMeshAgent agent;
     private bool inMotion;
 	private bool atDest = false;
+	private DisplayUIImageFill displayUIImageFill;
 
 	public float agentSpeed = 3.5f;
     private float packageDropoffTime = 5;
@@ -19,18 +20,23 @@ public class DroneData : MonoBehaviour {
     void Start()
 	{
 		agent = GetComponent<NavMeshAgent>();
+		displayUIImageFill = GetComponent<DisplayUIImageFill>();
+
+		displayUIImageFill.Display(sO_Drone.currentFuelLevel/100);
 	}
 
 	public void MoveNavMesh(Transform dest)
 	{
 		if(sO_Drone.currentFuelLevel > 0)
 		{
-			NavMeshPath path = new NavMeshPath();
-			agent.CalculatePath(dest.position, path);
+			/*NavMeshPath path = new NavMeshPath();
+			agent.CalculatePath(dest.position, path);*/
 
 			agent.speed = agentSpeed;
 			agent.isStopped = false;
-			agent.path = path;
+			//agent.path = path;
+
+			agent.destination = dest.position;
 
 			inMotion = true;
 			atDest = false;
@@ -50,6 +56,7 @@ public class DroneData : MonoBehaviour {
 
 			while(agent.remainingDistance > 0.3 && inMotion)
 			{
+				print (agent.remainingDistance);
 				yield return null;
 			}
 
@@ -57,6 +64,7 @@ public class DroneData : MonoBehaviour {
 			{
 				print("stopped");
 			}
+
 			else
 			{
 				atDest = true;
@@ -94,6 +102,7 @@ public class DroneData : MonoBehaviour {
 					inMotion = false;
 				}
 
+				displayUIImageFill.Display(sO_Drone.currentFuelLevel/100);
 				yield return new WaitForSeconds(1);
 			}
 
@@ -116,15 +125,13 @@ public class DroneData : MonoBehaviour {
 		StartCoroutine(UseFuel());
 	}
 
-
 	IEnumerator Refuel()
 	{
 		while (sO_Drone.currentFuelLevel < 100)
 		{
 			sO_Drone.currentFuelLevel++;
+			displayUIImageFill.Display(sO_Drone.currentFuelLevel/100);
 			yield return new WaitForSeconds(1);
 		}
 	}
-
-
 }
