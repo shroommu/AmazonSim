@@ -153,35 +153,11 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-<<<<<<< HEAD
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &12712629
 MeshRenderer:
-=======
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b5e13e0233d7d4b980faf0148017ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDrone: {fileID: 0}
-  currentDestination: {fileID: 0}
-  destinations:
-  - {fileID: 1966332453}
-  - {fileID: 1503808485}
-  - {fileID: 232361031}
-  drones:
-  - {fileID: 1957677357}
-  - {fileID: 936406943}
-  - {fileID: 418205230}
-  packages: []
-  warehousePads:
-  - {fileID: 800507463}
-  - {fileID: 1813413377}
-  - {fileID: 402359622}
---- !u!224 &216404661
-RectTransform:
->>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}

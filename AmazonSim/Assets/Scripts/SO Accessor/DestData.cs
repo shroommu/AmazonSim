@@ -17,7 +17,7 @@ public class DestData : MonoBehaviour {
     public void CalculateDistance()
     {
         distance = Vector3.Distance(warehouse.position, dropSpot.transform.position);
-        sO_Destination.distance = distance;
+        //sO_Destination.distance = distance;
     }
 
 }

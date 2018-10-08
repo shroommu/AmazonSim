@@ -29,14 +29,14 @@ public class DroneData : MonoBehaviour {
 	{
 		if(sO_Drone.currentFuelLevel > 0)
 		{
-			/*NavMeshPath path = new NavMeshPath();
-			agent.CalculatePath(dest.position, path);*/
+			NavMeshPath path = new NavMeshPath();
+			agent.CalculatePath(dest.position, path);
 
 			agent.speed = agentSpeed;
 			agent.isStopped = false;
-			//agent.path = path;
+			agent.path = path;
 
-			agent.destination = dest.position;
+			//agent.destination = dest.position;
 
 			inMotion = true;
 			atDest = false;
