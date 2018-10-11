@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db73f278b59a155428d7233cb7adf60a, type: 3}
-  m_Name: House 3
+  m_Name: Destination 3
   m_EditorClassIdentifier: 
-  destName: 
-  destPkg: {fileID: 0}
-  distance: 0
+  destNum: 3
+  pkgNum: 0
+  pkgWeight: 0

@@ -6,9 +6,17 @@ using UnityEngine;
 
 public class SO_Package : ScriptableObject {
 
-	public string pkgName;
-	public string pkgWeight;
+	public int pkgNum;
+	public float pkgWeight;
 
-	public SO_Destination pkgDestination;
+	public int destNum;
+
+	public float pkgWgtMin = 0.1f;
+	public float pkgWgtMax = 5;
+
+	public void RandomizePackageWeight()
+	{
+		pkgWeight = Random.Range(pkgWgtMin, pkgWgtMax);
+	}
 
 }

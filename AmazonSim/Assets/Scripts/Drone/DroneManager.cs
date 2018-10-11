@@ -15,7 +15,7 @@ public class DroneManager : MonoBehaviour {
 
 	public void Dispatch()
 	{
-		currentDrone.GetComponent<DroneData>().MoveNavMesh(currentDestination);
+		currentDrone.GetComponent<DroneHorizMovement>().MoveNavMesh(currentDestination);
 	}
 
 }
