@@ -6,6 +6,8 @@ public class CalculateFuelConsumption : MonoBehaviour {
 
 	private DroneManager droneManager;
 	public float fuelConsumption;
+	public GameObject fuelText;
+
 
 	void Start()
 	{
@@ -15,6 +17,7 @@ public class CalculateFuelConsumption : MonoBehaviour {
 	public void Calculate()
 	{
 		fuelConsumption = droneManager.currentDistance * droneManager.currentPackage.pkgWeight;
+		fuelText.GetComponent<DisplayUIText>().Display(fuelConsumption.ToString());
 	}
 		
 	

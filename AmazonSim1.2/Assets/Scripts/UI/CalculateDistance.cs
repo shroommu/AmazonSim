@@ -9,10 +9,10 @@ public class CalculateDistance : MonoBehaviour {
 	public DroneManager droneManager;
 	public UnityEvent unityEvent;
 
-	/*void StartGame()
+	void Start()
 	{
 		droneManager = GameObject.Find("DroneManager").GetComponent<DroneManager>();
-	}*/
+	}
 
 	//calculates the roundtrip distance from the warehouse to the destination and back
 	public void Calculate()
@@ -22,6 +22,9 @@ public class CalculateDistance : MonoBehaviour {
 		NavMeshAgent dummyAgent = droneManager.droneDummiesAir[dummyNumber].GetComponent<NavMeshAgent>();
 
 		dummyAgent.CalculatePath(droneManager.currentDestination.position, dummyPath);
+		dummyAgent.isStopped = true;
+		dummyAgent.path = dummyPath;
+
 		droneManager.currentDistance = (Vector3.Distance(droneManager.droneDummiesAir[dummyNumber].position, droneManager.droneDummiesGround[dummyNumber].position) + dummyAgent.remainingDistance) * 2;
 		print(droneManager.currentDistance);
 		unityEvent.Invoke();

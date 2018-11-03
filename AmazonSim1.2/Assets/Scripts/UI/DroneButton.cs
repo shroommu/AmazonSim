@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DroneButton : MonoBehaviour {
 
-	private DroneManager droneManager;
+	public DroneManager droneManager;
 
 	public int buttonNumber;
 	public Text droneName;
