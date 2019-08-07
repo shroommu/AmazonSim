@@ -9,7 +9,7 @@ public class DroneHorizMovement : MonoBehaviour {
 	private DroneData droneData;
 	public DroneVertMovement droneVertMovement;
 
-	public float agentSpeed = 3.5f;
+	public float agentSpeed = 7f;
 
 	private bool checkForPathRunning = false;
 
@@ -21,72 +21,70 @@ public class DroneHorizMovement : MonoBehaviour {
 
 	public void MoveNavMesh(Transform dest)
 	{
-		print(dest);
-
 		if(droneData.sO_Drone.currentFuelLevel > 0)
 		{
+			StartDrone();
 			NavMeshPath path = new NavMeshPath();
 			agent.CalculatePath(dest.position, path);
 
-			agent.speed = agentSpeed;
-			agent.isStopped = false;
 			agent.path = path;
 
-			droneData.inMotion = true;
-
 			StartCoroutine(CheckForPath(false));
-			
 		}
 	}
 
 	IEnumerator CheckForPath(bool destIsWarehouse)
 	{
-		print("starting check for path");
-
 		if(!checkForPathRunning)
-		{
+		{	
 			checkForPathRunning = true;
-
-			while(agent.remainingDistance > 0.3 && droneData.inMotion)
+			
+			while(agent.remainingDistance > 0.3)
 			{
-				//print (agent.remainingDistance);
 				yield return null;
 			}
 
-			if (droneData.inMotion == false)
-			{
-				print("stopped");
-			}
+			StopDrone();
 
+			if(droneData.hasPackage)
+			{
+				droneVertMovement.Descend();
+			}
 			else
 			{
-				droneData.inMotion = false;
-				print("at destination");
-				agent.isStopped = true;
-
-				if(droneData.hasPackage)
-				{
-					droneVertMovement.Descend();
-				}
-				else
-				{
-					droneData.destGround = droneData.droneManager.warehousePads[droneData.sO_Drone.droneNumber].GetComponent<DestData>().dropspotGround;
-					droneVertMovement.Descend();
-				}
+				droneData.destGround = DroneManager.instance.warehousePads[droneData.sO_Drone.droneNumber - 1].GetComponent<DestData>().dropspotGround;
+				droneVertMovement.Descend();
 			}
+
 			checkForPathRunning = false;
 		}
 	}
 
 	public void ReturnToWarehouse()
 	{
+		StartDrone();
+
 		NavMeshPath path = new NavMeshPath();
-		agent.CalculatePath(droneData.droneManager.warehousePads[droneData.sO_Drone.droneNumber].position, path);
-		agent.speed = agentSpeed;
-		agent.isStopped = false;
+		agent.CalculatePath(DroneManager.instance.warehousePads[droneData.sO_Drone.droneNumber - 1].GetComponent<DestData>().dropspotAir.position, path);
+
 		agent.path = path;
-		droneData.inMotion = true;
 		StartCoroutine(CheckForPath(true));
+	}
+
+	public void StopDrone()
+	{
+		if(droneData.isDispatched)
+		{
+			agent.isStopped = true;
+		}
+	}
+
+	public void StartDrone()
+	{
+		if(droneData.isDispatched)
+		{
+			agent.isStopped = false;
+		}
 	}
 
 }

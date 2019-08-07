@@ -11,8 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0186d49ecc2af0e43972ddf77976567b, type: 3}
   m_Name: Package 2
   m_EditorClassIdentifier: 
-  pkgNum: 1
+  pkgNum: 2
   pkgWeight: 4
-  destNum: 0
-  pkgWgtMin: 0.1
-  pkgWgtMax: 5
+  canBeRefreshed: 0

@@ -1,30 +1,55 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DispatchDrones : MonoBehaviour {
 
-	public DroneManager droneManager;
-	//public DestinationManager destinationManager;
+	//public DroneManager droneManager;
+	public UnityEvent cantDispatchEvent;
+	public UnityEvent canDispatchEvent;
+	public UnityEvent noDroneEvent;
+	public UnityEvent noDestEvent;
 
-	public void StartGame()
-	{
-		droneManager = GameObject.Find("DroneManager").GetComponent<DroneManager>();
-
-	}
+	private DroneData droneData;
 
 	public void Dispatch()
 	{	
-		DroneData droneData = droneManager.currentDrone.GetComponent<DroneData>();
-
-		droneData.destAir = droneManager.currentDestination.GetComponent<DestData>().dropspotAir;
+		if(DroneManager.instance.currentDrone != null)
+		{
+			droneData = DroneManager.instance.currentDrone.GetComponent<DroneData>();
+		}
 		
-		droneData.destGround = droneManager.currentDestination.GetComponent<DestData>().dropspotGround;
-		droneData.destNum = droneManager.currentDestination.GetComponent<DestData>().sO_Destination.destNum;
-		droneData.sO_Package = droneManager.currentPackage;
-		droneData.droneMesh.GetComponent<DroneVertMovement>().Ascend();
-		print(droneData.sO_Package);
-		droneData.hasPackage = true;
-	}
+		if(!droneData.isDispatched && DroneManager.instance.currentDrone != null && DroneManager.instance.currentDestination != null)
+		{
+			droneData.destAir = DroneManager.instance.currentDestination.GetComponent<DestData>().dropspotAir;
+			droneData.destGround = DroneManager.instance.currentDestination.GetComponent<DestData>().dropspotGround;
+			droneData.sO_Package = DroneManager.instance.currentPackage;
+			droneData.sO_Destination = DroneManager.instance.currentsO_Destination;
+			droneData.droneMesh.GetComponent<DroneVertMovement>().Ascend();
+			droneData.sO_Package.isEnRoute = true;
+			droneData.hasPackage = true;
+			droneData.isDispatched = true;
+			DroneManager.instance.currentDrone.GetComponent<DroneAlertSystem>().OnLeftWarehouse();
+			droneData.StartDeliveryTimer();
+			droneData.GetComponentInChildren<DroneCrash>().StartCalcCrash();
 
+			canDispatchEvent.Invoke();
+		}
+
+		else if (DroneManager.instance.currentDrone == null)
+		{
+			noDroneEvent.Invoke();
+		}
+
+		else if (DroneManager.instance.currentDestination == null)
+		{
+			noDestEvent.Invoke();
+		}
+
+		else
+		{
+			cantDispatchEvent.Invoke();
+		}
+	}
 }

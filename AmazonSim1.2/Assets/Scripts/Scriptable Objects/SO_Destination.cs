@@ -7,11 +7,9 @@ using UnityEngine;
 public class SO_Destination : ScriptableObject {
 
 	public int destNum;
-	public int pkgNum;
-
-	//public float pkgWeight;
 	public string destName;
-	public float destDist;
+
+	public SO_Package desiredPackage;
 
 	
 	

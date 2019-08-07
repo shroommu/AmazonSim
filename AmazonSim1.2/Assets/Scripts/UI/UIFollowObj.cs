@@ -7,7 +7,7 @@ public class UIFollowObj : MonoBehaviour {
 	public Transform target;
 	public bool canFollow;
 
-	void Start()
+	public void StartFollow()
 	{
 		canFollow = true;
 		StartCoroutine(Follow());
@@ -15,10 +15,9 @@ public class UIFollowObj : MonoBehaviour {
 
 	IEnumerator Follow()
 	{
-		while(canFollow)
+		while(canFollow && target)
 		{
 			Vector3 screenPos = Camera.main.WorldToScreenPoint(target.position);
-			print(screenPos);
      		transform.position = screenPos;
 			yield return null;
 		}

@@ -57,8 +57,8 @@ GameObject:
   - component: {fileID: 114687766995678444}
   - component: {fileID: 114049808633163740}
   - component: {fileID: 114033852164099434}
-  - component: {fileID: 114822186881549794}
   - component: {fileID: 114098355028744140}
+  - component: {fileID: 114843819238613510}
   m_Layer: 5
   m_Name: Drone_Btn
   m_TagString: Untagged
@@ -119,7 +119,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114033852164099434}
         m_MethodName: Select
-        m_Mode: 3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114843819238613510}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -142,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   droneManager: {fileID: 0}
+  droneButtonManager: {fileID: 0}
+  sO_Drone: {fileID: 11400000, guid: 23a2ea26259289e44bf8a21126441364, type: 2}
   buttonNumber: 0
   droneName: {fileID: 114689823926356922}
   droneFuelLevel: {fileID: 114266268581610604}
@@ -240,7 +253,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Drone 1
---- !u!114 &114822186881549794
+--- !u!114 &114843819238613510
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -248,37 +261,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948238871935702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8f1452b9995ed4ba3b9967e26d8f30, type: 3}
+  m_Script: {fileID: 11500000, guid: 841a8f6d3701c8141a5ce32855069b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 53f75d488a2289343ab7281e73245a48, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114033852164099434}
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114098355028744140}
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  onClickColor: {r: 0, g: 0.3137255, b: 0.5019608, a: 0.6509804}
 --- !u!222 &222233365258259930
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -323,16 +309,16 @@ RectTransform:
   m_GameObject: {fileID: 1948238871935702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000048, y: 1.0000049, z: 1.0000049}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224853302846364670}
   - {fileID: 224079265655395970}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -216, y: 181.99997}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 295.52, y: 150.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224853302846364670

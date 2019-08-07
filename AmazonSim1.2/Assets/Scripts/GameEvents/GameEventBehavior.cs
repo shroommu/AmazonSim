@@ -7,8 +7,8 @@ public class GameEventBehavior : StateMachineBehaviour {
 
 	public GameEvent gameEvent;
 
-	void OnStateEnter (){
+	void OnStateEnter ()
+	{
 		gameEvent.Raise();
-		//Debug.Log(gameEvent);
 	}
 }

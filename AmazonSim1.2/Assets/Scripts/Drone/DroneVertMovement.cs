@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class DroneVertMovement : MonoBehaviour {
 
@@ -12,10 +13,14 @@ public class DroneVertMovement : MonoBehaviour {
 	private DroneData droneData;
 	private DroneFuel droneFuel;
 	private DroneHorizMovement droneHorizMovement;
-	
+
+	public UnityEvent packageDropoffEvent;	
 
 	private bool canMoveVert;
+	private bool moveVertRunning = false;
 	public Transform droneAirPos;
+
+	
 
 	void Start() 
 	{
@@ -26,46 +31,68 @@ public class DroneVertMovement : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		droneData.atDest = true;
-
-		if(!other.GetComponent<DropspotData>().isWarehouse)
+		if(other.GetComponent<DropspotData>() != null)
 		{
-			destColl = droneData.destAir;
-			print("the destination is " + destColl);
-			StartCoroutine(DropOffPackage());
-		}
-		else
-		{
-			StartCoroutine(droneFuel.Refuel());
+			if(!other.GetComponent<DropspotData>().isWarehouse)
+			{
+				droneData.atDest = true;
+				destColl = droneData.destAir;
+				StartCoroutine(DropOffPackage());
+			}
+			else
+			{
+				droneData.atDest = true;
+				droneData.isDispatched = false;
+				transform.parent.GetComponent<DroneAlertSystem>().OnReturnedWareHouse();
+				StartCoroutine(droneFuel.Refuel());
+			}
 		}
 	}
 
 	public void Descend()
 	{
-		StartCoroutine(MoveDroneVert(droneData.destGround, false));
+		if(!moveVertRunning)
+		{
+			StartCoroutine(MoveDroneVert(droneData.destGround, false));
+		}
+		
 	}
 
 	public void Ascend()
 	{
 		droneData.atDest = false;
-		print("ascending");
-		print(droneAirPos);
-		print(droneData.sO_Package.pkgWeight);
-		StartCoroutine(MoveDroneVert(droneAirPos, true));
-		StartCoroutine(droneFuel.UseFuel(droneData.sO_Package.pkgWeight));
+
+		if(!moveVertRunning)
+		{
+			StartCoroutine(MoveDroneVert(droneAirPos, true));
+		}
+		
+
+		if(droneData.sO_Package != null)
+		{
+			StartCoroutine(droneFuel.UseFuel(droneData.sO_Package.pkgWeight));
+		}
+		else
+		{
+			StartCoroutine(droneFuel.UseFuel(0));
+		}
+		
 	}
 
 	IEnumerator DropOffPackage()
 	{
 		yield return new WaitForSeconds(packageDropoffTime);
+		packageDropoffEvent.Invoke();
 		droneData.hasPackage = false;
 		Ascend();
 	}
 
 	IEnumerator MoveDroneVert(Transform coll, bool isOrigPos)
 	{
+		moveVertRunning = true;
 		float lerpFrac = 0;
 		Vector3 pos;
+		
 		if(isOrigPos)
 		{
 			pos = transform.localPosition;
@@ -74,7 +101,6 @@ public class DroneVertMovement : MonoBehaviour {
 		{
 			pos = transform.position;
 		}
-		
 
 		while(lerpFrac < 1)
 		{
@@ -100,5 +126,6 @@ public class DroneVertMovement : MonoBehaviour {
 		{
 			droneHorizMovement.ReturnToWarehouse();
 		}
+		moveVertRunning = false;
 	}
 }

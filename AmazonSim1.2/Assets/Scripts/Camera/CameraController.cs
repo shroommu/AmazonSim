@@ -10,14 +10,27 @@ public class CameraController : MonoBehaviour {
 	public float scrollSpeed = 50;
 
 	public float rotateSpeed = 20;
+	
+	public Vector2 panLimitMin;
+	public Vector2 panLimitMax;
+	public Vector2 zoomLimit;
 
-	private float rot;
 	public bool canMoveCamera = false;
 	
 	public void StartGame()
 	{
+		StartCameraMovement();
+	}
+
+	public void StartCameraMovement()
+	{
 		canMoveCamera = true;
 		StartCoroutine(MoveCamera());
+	}
+
+	public void StopCameraMovement()
+	{
+		canMoveCamera = false;
 	}
 
 
@@ -55,13 +68,14 @@ public class CameraController : MonoBehaviour {
 
 			float scrollWheel = Input.GetAxis("Mouse ScrollWheel");
 			pos.y -= scrollWheel * scrollSpeed * 100 * Time.deltaTime;
+			
+			pos.x = Mathf.Clamp(pos.x, panLimitMin.x, panLimitMax.x);
+			pos.y = Mathf.Clamp(pos.y, zoomLimit.x, zoomLimit.y);
+			pos.z = Mathf.Clamp(pos.z, panLimitMin.y, panLimitMax.y);
 
 			transform.position = pos;
-	
+
 			yield return null;
 		}
-
 	}
-
-
 }

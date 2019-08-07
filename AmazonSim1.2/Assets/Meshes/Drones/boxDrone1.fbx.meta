@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 1d983797fe458bf419ede7dbb4d3b87a
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Drone
+    100004: Geometry
+    100006: joint1
+    100008: joint10
+    100010: joint11
+    100012: joint2
+    100014: joint3
+    100016: joint4
+    100018: joint5
+    100020: joint6
+    100022: joint7
+    100024: joint8
+    100026: joint9
+    100028: Package
+    100030: Skeleton
+    100032: body_JNT
+    100034: clamp_JNT
+    100036: clamp_JNT1
+    100038: propeller_JNT
+    100040: propeller_JNT1
+    100042: propeller_JNT2
+    100044: propeller_JNT3
+    100046: propeller_JNT4
+    100048: propeller_JNT5
+    100050: propeller_JNT6
+    100052: propeller_JNT7
+    400000: //RootNode
+    400002: Drone
+    400004: Geometry
+    400006: joint1
+    400008: joint10
+    400010: joint11
+    400012: joint2
+    400014: joint3
+    400016: joint4
+    400018: joint5
+    400020: joint6
+    400022: joint7
+    400024: joint8
+    400026: joint9
+    400028: Package
+    400030: Skeleton
+    400032: body_JNT
+    400034: clamp_JNT
+    400036: clamp_JNT1
+    400038: propeller_JNT
+    400040: propeller_JNT1
+    400042: propeller_JNT2
+    400044: propeller_JNT3
+    400046: propeller_JNT4
+    400048: propeller_JNT5
+    400050: propeller_JNT6
+    400052: propeller_JNT7
+    2100000: body_MAT
+    2100002: knobs_MAT
+    2100004: Bars_MAT
+    2100006: legs_MAT
+    2100008: things
+    2100010: clamps_MAT
+    2100012: underBox_MAT
+    2100014: propellers
+    2100016: package_MAT
+    2300000: Package
+    3300000: Package
+    4300000: Drone
+    4300002: Package
+    7400000: Flying
+    9500000: //RootNode
+    13700000: Drone
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bars_MAT
+    second: {fileID: 2100000, guid: 73a283b7b21cf4248bb879619ed1e299, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_MAT
+    second: {fileID: 2100000, guid: e11eb3c993b95d049b4c4ca6480327ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: clamps_MAT
+    second: {fileID: 2100000, guid: 19da08bc24459a648b461a22d3d6653c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: knobs_MAT
+    second: {fileID: 2100000, guid: 2a2eddd3084b1fc4b90217e6a059017c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: legs_MAT
+    second: {fileID: 2100000, guid: de1281106de54ec448836379eb267d59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: package_MAT
+    second: {fileID: 2100000, guid: 9e25c8f62a8470044b10807dfcfbc38a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: propellers
+    second: {fileID: 2100000, guid: 4fd80d29f53e12c43a1b59fd17bad82c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: things
+    second: {fileID: 2100000, guid: 19da08bc24459a648b461a22d3d6653c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: underBox_MAT
+    second: {fileID: 2100000, guid: 33250ed584219c24b9383752c549b622, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Flying
+      takeName: Take 001
+      firstFrame: 13
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

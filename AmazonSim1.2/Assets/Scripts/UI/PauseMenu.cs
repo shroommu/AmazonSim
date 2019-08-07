@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour
 
 	public GameObject pauseMenuUI;
 
-   	public GameObject gameStateManager;
+   	//public GameObject gameStateManager;
 	private Animator gameStateMachine;
 
 	private bool gameRunning;
@@ -18,15 +18,17 @@ public class PauseMenu : MonoBehaviour
 
 	void Start()
 	{
-		gameStateMachine = gameStateManager.GetComponent<Animator>();
+		gameStateMachine = GameObject.Find("GameStateManager").GetComponent<Animator>();
 	}
 
 	//runs when GameStateManager changes to InGame state.
 	public void StartGame()
 	{
+		print("starting game");
 		gameRunning = true;
 		if(!pauseCheckRunning)
 		{
+			print("starting pausecheck coroutine");
 			StartCoroutine(PauseCheck());
 		}
 	}

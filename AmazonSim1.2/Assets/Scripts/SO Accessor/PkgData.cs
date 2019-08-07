@@ -6,4 +6,6 @@ public class PkgData : MonoBehaviour {
 
 	public SO_Package sO_Package;
 
+	public AnimationCurve weightCurve;
+
 }

@@ -44,7 +44,6 @@ public class MenuMethods : MonoBehaviour {
 		}
 
 		isOpen = _menuOpenBool;
-		print(gameObject);
 		canvasGroup.blocksRaycasts = canvasGroup.interactable = _menuOpenBool;
 		canvasGroup.alpha = _alphaInt;
 	}
@@ -60,7 +59,6 @@ public class MenuMethods : MonoBehaviour {
 		isOpen = true;
 		canvasGroup.blocksRaycasts = canvasGroup.interactable = true;
 		canvasGroup.alpha = 1;
-		print("Opening popup");
 	}
 
 	//makes tempActiveMenu (set in OpenPopup) interactable, makes this popup menu invisible and non-interactable
@@ -71,6 +69,5 @@ public class MenuMethods : MonoBehaviour {
 		isOpen = false;
 		canvasGroup.blocksRaycasts = canvasGroup.interactable = false;
 		canvasGroup.alpha = 0;
-		print("Closing popup");
 	}
 }

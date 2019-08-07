@@ -1,0 +1,583 @@
+fileFormatVersion: 2
+guid: 1f40fde1c4ac3ff41a17306dd794267e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ChainLinks
+    100002: Chainlinks
+    100004: FireHydrant1
+    100006: FireHydrant2
+    100008: FireHydrantBody
+    100010: FireHydrantBody 1
+    100012: //RootNode
+    100014: FrontCap
+    100016: FrontCap 1
+    100018: LeftCap
+    100020: LeftCap 1
+    100022: pCube2
+    100024: pCube2 1
+    100026: pCube3
+    100028: pCube3 1
+    100030: pCube4
+    100032: pCube4 1
+    100034: pCylinder4
+    100036: pCylinder4 1
+    100038: pCylinder5
+    100040: pCylinder5 1
+    100042: pCylinder6
+    100044: pCylinder6 1
+    100046: pCylinder7
+    100048: pCylinder7 1
+    100050: pCylinder8
+    100052: pCylinder8 1
+    100054: pCylinder9
+    100056: pCylinder9 1
+    100058: pTorus1
+    100060: pTorus1 1
+    100062: pTorus10
+    100064: pTorus10 1
+    100066: pTorus11
+    100068: pTorus11 1
+    100070: pTorus12
+    100072: pTorus12 1
+    100074: pTorus13
+    100076: pTorus13 1
+    100078: pTorus14
+    100080: pTorus14 1
+    100082: pTorus15
+    100084: pTorus15 1
+    100086: pTorus16
+    100088: pTorus16 1
+    100090: pTorus17
+    100092: pTorus17 1
+    100094: pTorus18
+    100096: pTorus18 1
+    100098: pTorus19
+    100100: pTorus2
+    100102: pTorus2 1
+    100104: pTorus20
+    100106: pTorus20 1
+    100108: pTorus21
+    100110: pTorus22
+    100112: pTorus22 1
+    100114: pTorus23
+    100116: pTorus23 1
+    100118: pTorus24
+    100120: pTorus24 1
+    100122: pTorus25
+    100124: pTorus25 1
+    100126: pTorus26
+    100128: pTorus26 1
+    100130: pTorus27
+    100132: pTorus27 1
+    100134: pTorus28
+    100136: pTorus28 1
+    100138: pTorus29
+    100140: pTorus29 1
+    100142: pTorus3
+    100144: pTorus30
+    100146: pTorus31
+    100148: pTorus32
+    100150: pTorus32 1
+    100152: pTorus33
+    100154: pTorus33 1
+    100156: pTorus34
+    100158: pTorus34 1
+    100160: pTorus35
+    100162: pTorus35 1
+    100164: pTorus36
+    100166: pTorus36 1
+    100168: pTorus37
+    100170: pTorus37 1
+    100172: pTorus4
+    100174: pTorus4 1
+    100176: pTorus5
+    100178: pTorus5 1
+    100180: pTorus6
+    100182: pTorus6 1
+    100184: pTorus7
+    100186: pTorus7 1
+    100188: pTorus8
+    100190: pTorus8 1
+    100192: pTorus9
+    100194: pTorus9 1
+    100196: RightCap
+    100198: RightCap 1
+    100200: TopBolt
+    100202: TopBolt 1
+    400000: ChainLinks
+    400002: Chainlinks
+    400004: FireHydrant1
+    400006: FireHydrant2
+    400008: FireHydrantBody
+    400010: FireHydrantBody 1
+    400012: //RootNode
+    400014: FrontCap
+    400016: FrontCap 1
+    400018: LeftCap
+    400020: LeftCap 1
+    400022: pCube2
+    400024: pCube2 1
+    400026: pCube3
+    400028: pCube3 1
+    400030: pCube4
+    400032: pCube4 1
+    400034: pCylinder4
+    400036: pCylinder4 1
+    400038: pCylinder5
+    400040: pCylinder5 1
+    400042: pCylinder6
+    400044: pCylinder6 1
+    400046: pCylinder7
+    400048: pCylinder7 1
+    400050: pCylinder8
+    400052: pCylinder8 1
+    400054: pCylinder9
+    400056: pCylinder9 1
+    400058: pTorus1
+    400060: pTorus1 1
+    400062: pTorus10
+    400064: pTorus10 1
+    400066: pTorus11
+    400068: pTorus11 1
+    400070: pTorus12
+    400072: pTorus12 1
+    400074: pTorus13
+    400076: pTorus13 1
+    400078: pTorus14
+    400080: pTorus14 1
+    400082: pTorus15
+    400084: pTorus15 1
+    400086: pTorus16
+    400088: pTorus16 1
+    400090: pTorus17
+    400092: pTorus17 1
+    400094: pTorus18
+    400096: pTorus18 1
+    400098: pTorus19
+    400100: pTorus2
+    400102: pTorus2 1
+    400104: pTorus20
+    400106: pTorus20 1
+    400108: pTorus21
+    400110: pTorus22
+    400112: pTorus22 1
+    400114: pTorus23
+    400116: pTorus23 1
+    400118: pTorus24
+    400120: pTorus24 1
+    400122: pTorus25
+    400124: pTorus25 1
+    400126: pTorus26
+    400128: pTorus26 1
+    400130: pTorus27
+    400132: pTorus27 1
+    400134: pTorus28
+    400136: pTorus28 1
+    400138: pTorus29
+    400140: pTorus29 1
+    400142: pTorus3
+    400144: pTorus30
+    400146: pTorus31
+    400148: pTorus32
+    400150: pTorus32 1
+    400152: pTorus33
+    400154: pTorus33 1
+    400156: pTorus34
+    400158: pTorus34 1
+    400160: pTorus35
+    400162: pTorus35 1
+    400164: pTorus36
+    400166: pTorus36 1
+    400168: pTorus37
+    400170: pTorus37 1
+    400172: pTorus4
+    400174: pTorus4 1
+    400176: pTorus5
+    400178: pTorus5 1
+    400180: pTorus6
+    400182: pTorus6 1
+    400184: pTorus7
+    400186: pTorus7 1
+    400188: pTorus8
+    400190: pTorus8 1
+    400192: pTorus9
+    400194: pTorus9 1
+    400196: RightCap
+    400198: RightCap 1
+    400200: TopBolt
+    400202: TopBolt 1
+    2100000: FireHydrantRed
+    2100002: FHChainLinkMetal
+    2300000: FireHydrantBody
+    2300002: FireHydrantBody 1
+    2300004: FrontCap
+    2300006: FrontCap 1
+    2300008: LeftCap
+    2300010: LeftCap 1
+    2300012: pCube2
+    2300014: pCube2 1
+    2300016: pCube3
+    2300018: pCube3 1
+    2300020: pCube4
+    2300022: pCube4 1
+    2300024: pCylinder4
+    2300026: pCylinder4 1
+    2300028: pCylinder5
+    2300030: pCylinder5 1
+    2300032: pCylinder6
+    2300034: pCylinder6 1
+    2300036: pCylinder7
+    2300038: pCylinder7 1
+    2300040: pCylinder8
+    2300042: pCylinder8 1
+    2300044: pCylinder9
+    2300046: pCylinder9 1
+    2300048: pTorus1
+    2300050: pTorus1 1
+    2300052: pTorus10
+    2300054: pTorus10 1
+    2300056: pTorus11
+    2300058: pTorus11 1
+    2300060: pTorus12
+    2300062: pTorus12 1
+    2300064: pTorus13
+    2300066: pTorus13 1
+    2300068: pTorus14
+    2300070: pTorus14 1
+    2300072: pTorus15
+    2300074: pTorus15 1
+    2300076: pTorus16
+    2300078: pTorus16 1
+    2300080: pTorus17
+    2300082: pTorus17 1
+    2300084: pTorus18
+    2300086: pTorus18 1
+    2300088: pTorus19
+    2300090: pTorus2
+    2300092: pTorus2 1
+    2300094: pTorus20
+    2300096: pTorus20 1
+    2300098: pTorus21
+    2300100: pTorus22
+    2300102: pTorus22 1
+    2300104: pTorus23
+    2300106: pTorus23 1
+    2300108: pTorus24
+    2300110: pTorus24 1
+    2300112: pTorus25
+    2300114: pTorus25 1
+    2300116: pTorus26
+    2300118: pTorus26 1
+    2300120: pTorus27
+    2300122: pTorus27 1
+    2300124: pTorus28
+    2300126: pTorus28 1
+    2300128: pTorus29
+    2300130: pTorus29 1
+    2300132: pTorus3
+    2300134: pTorus30
+    2300136: pTorus31
+    2300138: pTorus32
+    2300140: pTorus32 1
+    2300142: pTorus33
+    2300144: pTorus33 1
+    2300146: pTorus34
+    2300148: pTorus34 1
+    2300150: pTorus35
+    2300152: pTorus35 1
+    2300154: pTorus36
+    2300156: pTorus36 1
+    2300158: pTorus37
+    2300160: pTorus37 1
+    2300162: pTorus4
+    2300164: pTorus4 1
+    2300166: pTorus5
+    2300168: pTorus5 1
+    2300170: pTorus6
+    2300172: pTorus6 1
+    2300174: pTorus7
+    2300176: pTorus7 1
+    2300178: pTorus8
+    2300180: pTorus8 1
+    2300182: pTorus9
+    2300184: pTorus9 1
+    2300186: RightCap
+    2300188: RightCap 1
+    2300190: TopBolt
+    2300192: TopBolt 1
+    3300000: FireHydrantBody
+    3300002: FireHydrantBody 1
+    3300004: FrontCap
+    3300006: FrontCap 1
+    3300008: LeftCap
+    3300010: LeftCap 1
+    3300012: pCube2
+    3300014: pCube2 1
+    3300016: pCube3
+    3300018: pCube3 1
+    3300020: pCube4
+    3300022: pCube4 1
+    3300024: pCylinder4
+    3300026: pCylinder4 1
+    3300028: pCylinder5
+    3300030: pCylinder5 1
+    3300032: pCylinder6
+    3300034: pCylinder6 1
+    3300036: pCylinder7
+    3300038: pCylinder7 1
+    3300040: pCylinder8
+    3300042: pCylinder8 1
+    3300044: pCylinder9
+    3300046: pCylinder9 1
+    3300048: pTorus1
+    3300050: pTorus1 1
+    3300052: pTorus10
+    3300054: pTorus10 1
+    3300056: pTorus11
+    3300058: pTorus11 1
+    3300060: pTorus12
+    3300062: pTorus12 1
+    3300064: pTorus13
+    3300066: pTorus13 1
+    3300068: pTorus14
+    3300070: pTorus14 1
+    3300072: pTorus15
+    3300074: pTorus15 1
+    3300076: pTorus16
+    3300078: pTorus16 1
+    3300080: pTorus17
+    3300082: pTorus17 1
+    3300084: pTorus18
+    3300086: pTorus18 1
+    3300088: pTorus19
+    3300090: pTorus2
+    3300092: pTorus2 1
+    3300094: pTorus20
+    3300096: pTorus20 1
+    3300098: pTorus21
+    3300100: pTorus22
+    3300102: pTorus22 1
+    3300104: pTorus23
+    3300106: pTorus23 1
+    3300108: pTorus24
+    3300110: pTorus24 1
+    3300112: pTorus25
+    3300114: pTorus25 1
+    3300116: pTorus26
+    3300118: pTorus26 1
+    3300120: pTorus27
+    3300122: pTorus27 1
+    3300124: pTorus28
+    3300126: pTorus28 1
+    3300128: pTorus29
+    3300130: pTorus29 1
+    3300132: pTorus3
+    3300134: pTorus30
+    3300136: pTorus31
+    3300138: pTorus32
+    3300140: pTorus32 1
+    3300142: pTorus33
+    3300144: pTorus33 1
+    3300146: pTorus34
+    3300148: pTorus34 1
+    3300150: pTorus35
+    3300152: pTorus35 1
+    3300154: pTorus36
+    3300156: pTorus36 1
+    3300158: pTorus37
+    3300160: pTorus37 1
+    3300162: pTorus4
+    3300164: pTorus4 1
+    3300166: pTorus5
+    3300168: pTorus5 1
+    3300170: pTorus6
+    3300172: pTorus6 1
+    3300174: pTorus7
+    3300176: pTorus7 1
+    3300178: pTorus8
+    3300180: pTorus8 1
+    3300182: pTorus9
+    3300184: pTorus9 1
+    3300186: RightCap
+    3300188: RightCap 1
+    3300190: TopBolt
+    3300192: TopBolt 1
+    4300000: FireHydrantBody
+    4300002: pCube2
+    4300004: pCube4
+    4300006: LeftCap
+    4300008: FrontCap
+    4300010: pCylinder5
+    4300012: pCylinder4
+    4300014: pCube3
+    4300016: RightCap
+    4300018: pCylinder9
+    4300020: pCylinder8
+    4300022: pCylinder7
+    4300024: pCylinder6
+    4300026: TopBolt
+    4300028: pTorus17
+    4300030: pTorus18
+    4300032: pTorus20
+    4300034: pTorus27
+    4300036: pTorus26
+    4300038: pTorus23
+    4300040: pTorus25
+    4300042: pTorus28
+    4300044: pTorus21
+    4300046: pTorus22
+    4300048: pTorus24
+    4300050: pTorus19
+    4300052: pTorus9
+    4300054: pTorus10
+    4300056: pTorus4
+    4300058: pTorus5
+    4300060: pTorus7
+    4300062: pTorus8
+    4300064: pTorus6
+    4300066: pTorus11
+    4300068: pTorus3
+    4300070: pTorus1
+    4300072: pTorus12
+    4300074: pTorus13
+    4300076: pTorus33
+    4300078: pTorus30
+    4300080: pTorus31
+    4300082: pTorus32
+    4300084: pTorus29
+    4300086: pTorus37
+    4300088: pTorus16
+    4300090: pTorus2
+    4300092: pTorus36
+    4300094: pTorus34
+    4300096: pTorus35
+    4300098: pTorus15
+    4300100: pTorus14
+    4300102: FireHydrantBody
+    4300104: pCylinder9
+    4300106: pCylinder8
+    4300108: pCylinder7
+    4300110: pCylinder6
+    4300112: pCylinder5
+    4300114: pCylinder4
+    4300116: pCube4
+    4300118: pCube2
+    4300120: pCube3
+    4300122: RightCap
+    4300124: FrontCap
+    4300126: LeftCap
+    4300128: TopBolt
+    4300130: pTorus1
+    4300132: pTorus4
+    4300134: pTorus5
+    4300136: pTorus6
+    4300138: pTorus7
+    4300140: pTorus8
+    4300142: pTorus9
+    4300144: pTorus10
+    4300146: pTorus11
+    4300148: pTorus12
+    4300150: pTorus13
+    4300152: pTorus14
+    4300154: pTorus28
+    4300156: pTorus27
+    4300158: pTorus26
+    4300160: pTorus25
+    4300162: pTorus24
+    4300164: pTorus23
+    4300166: pTorus22
+    4300168: pTorus20
+    4300170: pTorus18
+    4300172: pTorus17
+    4300174: pTorus15
+    4300176: pTorus37
+    4300178: pTorus2
+    4300180: pTorus36
+    4300182: pTorus35
+    4300184: pTorus34
+    4300186: pTorus33
+    4300188: pTorus32
+    4300190: pTorus29
+    4300192: pTorus16
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

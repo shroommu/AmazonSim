@@ -15,11 +15,11 @@ public static class PlayModeStateChangedExample
 
     private static void LogPlayModeState(PlayModeStateChange state)
 	{
-		Debug.Log("marking scenes dirty");
+		//Debug.Log("marking scenes dirty");
 		EditorSceneManager.MarkAllScenesDirty();
-		Debug.Log("saving scenes");
+		//Debug.Log("saving scenes");
 		EditorSceneManager.SaveOpenScenes();
-		Debug.Log("closing scenes");
+		//Debug.Log("closing scenes");
 		EditorSceneManager.CloseScene(SceneManager.GetSceneByName("AlexaScene"), false);
 	}
 }
