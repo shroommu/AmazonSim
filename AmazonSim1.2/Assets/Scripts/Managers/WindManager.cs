@@ -43,14 +43,11 @@ public class WindManager : MonoBehaviour {
 	IEnumerator ChangeWindDirection()
 	{
 		Vector3 currentDirection = windDirection;
-		print(currentDirection);
 		Vector3 newDirection = CalcNewDirection();
-		print(newDirection);
 		float currentSpeed = windSpeed;
-		print(currentSpeed);
 		float newSpeed = CalcNewWindSpeed();
-		print(newSpeed);
 		float interp = 0;
+		print(newDirection);
 
 		while(interp < 1)
 		{
@@ -58,6 +55,7 @@ public class WindManager : MonoBehaviour {
 			windDirection = Vector3.Lerp(currentDirection, newDirection, interp);
 			windSpeed = Mathf.Lerp(currentSpeed, newSpeed, interp);
 			windDirection *= windSpeed;
+			WeatherCompass.instance.UpdatePointer(windDirection);
 			
 			yield return null;
 		}
@@ -65,7 +63,7 @@ public class WindManager : MonoBehaviour {
 
 	public Vector3 CalcNewDirection()
 	{
-		Vector3 newDirection = new Vector3(Random.Range(0.0f, 1.0f), 0, Random.Range(0.0f, 1.0f));
+		Vector3 newDirection = new Vector3(Random.Range(-1.0f, 1.0f), 0, Random.Range(-1.0f, 1.0f));
 		return newDirection;
 	}
 

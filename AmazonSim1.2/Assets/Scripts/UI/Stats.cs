@@ -13,10 +13,10 @@ public class Stats : MonoBehaviour
     { 
         text = GetComponent<Text>();
 
-        lines.Add(string.Format("{0,5}\n", GameData.instance.numberOfPoints.ToString()));
-        lines.Add(string.Format("{0,5}\n", GameData.instance.numberOfDrones.ToString()));
-        lines.Add(string.Format("{0,5}\n", GameData.instance.numberOfDeliveries.ToString()));
-        lines.Add(string.Format("{0,5}\n", GameData.instance.totalTimeInGame.ToString()));
+        lines.Add(string.Format("{0}\n", GameData.instance.numberOfPoints.ToString()));
+        lines.Add(string.Format("{0}\n", GameData.instance.numberOfDrones.ToString()));
+        lines.Add(string.Format("{0}\n", GameData.instance.numberOfDeliveries.ToString()));
+        lines.Add(string.Format("{0} s\n", GameData.instance.totalTimeInGame.ToString()));
         lines.Add(string.Format("{0:0.00} lbs\n", GameData.instance.avgWeightPackages));
         lines.Add(string.Format("{0:0.00} s\n", GameData.instance.avgDeliveryTime));
         lines.Add(string.Format("{0:0.00}\n", GameData.instance.avgDeliveriesPerMin));

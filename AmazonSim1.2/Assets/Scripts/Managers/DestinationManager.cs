@@ -15,9 +15,7 @@ public class DestinationManager : MonoBehaviour {
 
 	public GameObject destinationSelectWindow;
 	public GameObject destinationButtonPrefab;
-	//public DroneManager droneManager;
 	public DestinationButtonManager destinationButtonManager;
-	//public PointManager pointManager;
 
 	public AnimationCurve weightCurve;
 
@@ -61,7 +59,6 @@ public class DestinationManager : MonoBehaviour {
 
 	IEnumerator GenerateDestinations()
 	{
-		print("generating destinations");
 		while(canGenerate)
 		{
 			if(packages.Count > 0 && destinations.Count > 0)
@@ -69,7 +66,6 @@ public class DestinationManager : MonoBehaviour {
 					int destNum = Random.Range(0, destinations.Count - 1);
 					print(destNum);
 					Generate(destNum);
-					print("new destination generated");
 			}
 			else
 			{
@@ -103,9 +99,6 @@ public class DestinationManager : MonoBehaviour {
 
 		thisDestButton.sO_Destination = thisDest;
 		thisDestButton.sO_Package = thisDest.desiredPackage;
-		//thisDestButton.droneManager = droneManager;
-		//thisDestButton.destinationManager = this;
-		//thisDestButton.pointManager = pointManager;
 		thisDestButton.buttonNum = buttonNum;
 		thisDestButton.mapButton = destMapButtons[thisDest.destNum];
 		thisDestButton.mapButton.SetActive(true);

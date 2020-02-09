@@ -35,8 +35,6 @@ public class DroneFuel : MonoBehaviour {
 	public IEnumerator UseFuel(float pgkWgt)
 	{
 
-		print("Start of UseFuel");
-
 		if(!useFuelRunning)
 		{
 			useFuelRunning = true;
@@ -44,7 +42,6 @@ public class DroneFuel : MonoBehaviour {
 			while(!droneData.atDest)
 			{
 				float windMultiplier = 1;
-				print("NavMeshAgent magnitude: " + navMeshAgent.velocity.magnitude);
 
 				if(navMeshAgent.velocity.magnitude != 0)
 				{
