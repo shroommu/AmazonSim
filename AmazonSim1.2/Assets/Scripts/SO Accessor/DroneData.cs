@@ -17,6 +17,7 @@ public class DroneData : MonoBehaviour {
 
 	public GameObject droneFuelUI;
 	public GameObject droneButton;
+	public GameObject droneStatusButton;
 
 	public Transform destAir;
 	public Transform destGround;
@@ -38,6 +39,11 @@ public class DroneData : MonoBehaviour {
 
 		GameData.instance.IncreaseDeliveryTime(deliveryTime);
 		
+	}
+
+	public void OnDroneReturn()
+	{ 
+		this.droneButton.SetActive(true);
 	}
 
 }

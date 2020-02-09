@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class LoadLevel : MonoBehaviour {
 
+	public static LoadLevel instance;
+
 	public string levelName;
 	
 	public GameObject gameStateManager;
@@ -13,6 +15,15 @@ public class LoadLevel : MonoBehaviour {
 
 	void Awake()
 	{
+		if(instance == null)
+		{
+			instance = this;
+		}
+		else if(instance != this)
+		{
+			Destroy(this);
+		}
+		
 		SceneManager.sceneLoaded += OnSceneLoaded;
 	}
 

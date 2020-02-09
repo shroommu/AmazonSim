@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class DispatchDrones : MonoBehaviour {
 
-	//public DroneManager droneManager;
 	public UnityEvent cantDispatchEvent;
 	public UnityEvent canDispatchEvent;
 	public UnityEvent noDroneEvent;

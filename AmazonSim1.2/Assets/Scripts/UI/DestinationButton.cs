@@ -4,11 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DestinationButton : MonoBehaviour {
-
-	//public DroneManager droneManager;
-	//public DestinationManager destinationManager;
-	//public PointManager pointManager;
-
+	
 	public SO_Destination sO_Destination;
 	public SO_Package sO_Package;
 	public GameObject mapButton;

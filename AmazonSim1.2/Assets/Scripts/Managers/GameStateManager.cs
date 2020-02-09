@@ -6,11 +6,22 @@ using UnityEngine.Events;
 //This class manages what state the game is in (ie preparing to start a match, currently in a match, or after the match has ended).
 public class GameStateManager : MonoBehaviour {
 
+	public static GameStateManager instance;
+
 	private Animator gameStateMachine;
 	//Animator must be set to unscaled time
 
 	void Awake()
 	{
+		if(instance == null)
+		{
+			instance = this;
+		}
+		else if(instance != this)
+		{
+			Destroy(this);
+		}
+		
 		gameStateMachine = GetComponent<Animator>();
 	}
 

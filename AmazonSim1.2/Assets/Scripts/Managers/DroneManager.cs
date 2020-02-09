@@ -39,4 +39,12 @@ public class DroneManager : MonoBehaviour {
 		currentDrone.GetComponent<DroneHorizMovement>().MoveNavMesh(currentDestination);
 	}
 
+	public void OnDroneCrash()
+	{ 
+		if (this.drones.Count == 0)
+		{ 
+			GameStateManager.instance.PostgameState();
+		}
+	}
+
 }

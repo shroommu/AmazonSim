@@ -26,6 +26,10 @@ public class DestinationManager : MonoBehaviour {
 	public int waitTime;
 	public int buttonNum = 0;
 
+	private int missedDeliveries;
+	public int maxMissedDeliveries = 5;
+	public Text gameOverText;
+
 	void Awake()
 	{
 		if(instance == null)
@@ -148,6 +152,17 @@ public class DestinationManager : MonoBehaviour {
 		{
 			destinations.Add(dest);
 			destsWithPkgs.Remove(dest);
+		}
+	}
+
+	public void IncreaseMissedDeliveries()
+	{ 
+		missedDeliveries++;
+
+		if (missedDeliveries >= maxMissedDeliveries)
+		{ 
+			GameStateManager.instance.PostgameState();
+			gameOverText.text = "You missed too many deliveries";
 		}
 	}
 

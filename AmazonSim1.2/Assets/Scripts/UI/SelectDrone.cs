@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SelectDrone : MonoBehaviour {
 
-	//public DroneManager droneManager;
-
-
-
 	public void Select()
-	{
-		//droneManager = GetComponent<DroneButton>().droneManager;
-		DroneManager.instance.currentDrone = DroneManager.instance.drones[GetComponent<DroneButton>().sO_Drone.droneNumber - 1];
+	{ 
+		foreach (GameObject current in DroneManager.instance.drones)
+		{ 
+			if (current.GetComponent<DroneData>().sO_Drone == GetComponent<DroneButton>().sO_Drone)
+			{ 
+			DroneManager.instance.currentDrone = current;
+			}
+		}
 	}
 }
