@@ -9105,7 +9105,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 538423304}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.87370366
+  m_Size: 0.8737036
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -37282,7 +37282,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 8e708f19ee265f045a03351da6fbcb48, type: 2}
   - {fileID: 2100000, guid: 5340f14d5497d25488a82578f8ae20fe, type: 2}
-  - {fileID: 2100004, guid: cd9c4493e69eb0546958ed8df620e445, type: 3}
+  - {fileID: 2100000, guid: a0427cf339e5891468d5f2b433b2d44a, type: 2}
   - {fileID: 2100000, guid: 2de6af5d7bf6041408a7544302a82add, type: 2}
   - {fileID: 2100000, guid: 9258cf1e72a10a344b56cb017b4f9891, type: 2}
   - {fileID: 2100000, guid: 757aba9d6801035489a817b4683dbd03, type: 2}
@@ -51364,7 +51364,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: b15051f94e6540448ac0ae3d8085e167, type: 2}
   - {fileID: 2100000, guid: 5340f14d5497d25488a82578f8ae20fe, type: 2}
-  - {fileID: 2100004, guid: cd9c4493e69eb0546958ed8df620e445, type: 3}
+  - {fileID: 2100000, guid: a0427cf339e5891468d5f2b433b2d44a, type: 2}
   - {fileID: 2100000, guid: 2de6af5d7bf6041408a7544302a82add, type: 2}
   - {fileID: 2100000, guid: 9258cf1e72a10a344b56cb017b4f9891, type: 2}
   - {fileID: 2100000, guid: 757aba9d6801035489a817b4683dbd03, type: 2}

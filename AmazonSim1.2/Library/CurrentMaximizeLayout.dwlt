@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 280
-    y: 92
+    y: 19
     width: 988
     height: 719
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 278
     height: 740
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -200,9 +200,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 24230000
-    m_LastClickedID: 8996
-    m_ExpandedIDs: eafbffff00000000
+    m_SelectedIDs: 5e230000
+    m_LastClickedID: 9054
+    m_ExpandedIDs: eafbffff0000000054230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -284,9 +284,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 193.23172, y: 143.14044, z: 16.90747}
+    m_Target: {x: 417.5088, y: 316.08838, z: 14.000916}
     speed: 2
-    m_Value: {x: 193.23172, y: 143.14044, z: 16.90747}
+    m_Value: {x: 417.5088, y: 316.08838, z: 14.000916}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -318,9 +318,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.025798056, y: -0.026390549, z: 0.00068113254, w: -0.9993195}
   m_Size:
-    m_Target: 480.2132
+    m_Target: 571.5035
     speed: 2
-    m_Value: 480.2132
+    m_Value: 571.5035
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f2090000
     m_LastClickedID: 2546
     m_ExpandedIDs: 00000000f2090000fa0a0000da1000004e110000b4150000e41e000000ca9a3bffffff7f
@@ -485,8 +485,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 24230000
-    m_LastClickedInstanceID: 8996
+    m_SelectedInstanceIDs: 5e230000
+    m_LastClickedInstanceID: 9054
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
