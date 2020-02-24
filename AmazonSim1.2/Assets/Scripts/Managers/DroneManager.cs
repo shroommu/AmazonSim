@@ -19,6 +19,8 @@ public class DroneManager : MonoBehaviour {
 	public List<Transform> droneDummiesAir;
 	public List<Transform> droneDummiesGround;
 
+	public int maxDrones = 20;
+
 	public int droneCounter = 1;
 	
 	void Awake()
