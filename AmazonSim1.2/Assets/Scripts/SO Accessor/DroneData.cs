@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class DroneData : MonoBehaviour {
 
-	//public DroneManager droneManager;
 	public SO_Drone sO_Drone;
 	public SO_Package sO_Package;
 	public SO_Destination sO_Destination;
@@ -38,12 +37,6 @@ public class DroneData : MonoBehaviour {
 		}
 
 		GameData.instance.IncreaseDeliveryTime(deliveryTime);
-		
-	}
-
-	public void OnDroneReturn()
-	{ 
-		this.droneButton.SetActive(true);
 	}
 
 }

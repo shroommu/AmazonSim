@@ -73,8 +73,9 @@ public class DroneCreator : MonoBehaviour {
 		droneButtonManager.droneButtons.Add(thisDroneButton);
 
 		//activate drone status button
-		DroneStatusButtonManager.instance.ActivateButton(newDrone.droneNumber - 1);
-		DroneStatusButtonManager.instance.droneStatusButtons[newDrone.droneNumber - 1].GetComponent<DroneCamFollow>().objToFollow = newDroneObj.transform.GetChild(1);
+		newDroneObj.GetComponent<DroneData>().droneStatusButton = DroneStatusButtonManager.instance.CreateButton();
+		newDroneObj.GetComponent<DroneData>().droneStatusButton.GetComponent<DroneCamFollow>().mainCamera = mainCamera;
+		newDroneObj.GetComponent<DroneData>().droneStatusButton.GetComponent<DroneCamFollow>().objToFollow = newDroneObj.transform.GetChild(1);
 
 	}
 }
