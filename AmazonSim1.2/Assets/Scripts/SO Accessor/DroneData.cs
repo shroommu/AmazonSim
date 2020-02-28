@@ -9,6 +9,8 @@ public class DroneData : MonoBehaviour {
 	public SO_Package sO_Package;
 	public SO_Destination sO_Destination;
 	public Transform droneMesh;
+
+	public Camera dronePOVCam;
 	
 	public bool isDispatched = false;
 	public bool atDest = false;
