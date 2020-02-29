@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class DroneStatusPopupManager : MonoBehaviour {
 
 	//TODO: Make this class dynamic (rendertexture changes based on which button is being hovered over)
+	public GameObject statusPopup;
 
 	public static DroneStatusPopupManager instance;
 
-	public RawImage test;
+	public RawImage ri;
 
 	// Use this for initialization
 	void Awake()
@@ -24,10 +25,18 @@ public class DroneStatusPopupManager : MonoBehaviour {
 		}
 	}
 
-	public void SetImage(Texture tex)
+	public void SetActive(RenderTexture tex)
     {
-		test.texture = tex;
+		statusPopup.SetActive(true);
+		ri.texture = tex;
+		
     }
+
+	public void SetInactive()
+	{
+		statusPopup.SetActive(false);
+		//ri.texture = null;
+	}
 
 
 

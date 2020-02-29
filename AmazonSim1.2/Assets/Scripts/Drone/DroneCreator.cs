@@ -71,14 +71,14 @@ public class DroneCreator : MonoBehaviour {
 		droneButtonManager.droneButtons.Add(thisDroneButton);
 
 		//activate drone status button
-		newDroneObj.GetComponent<DroneData>().droneStatusButton = DroneStatusButtonManager.instance.CreateButton();
+		RenderTexture rt = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
+		newDroneObj.GetComponent<DroneData>().dronePOVCam.targetTexture = rt;
+		newDroneObj.GetComponent<DroneData>().droneStatusButton = DroneStatusButtonManager.instance.CreateButton(rt);
 		newDroneObj.GetComponent<DroneData>().droneStatusButton.GetComponent<DroneCamFollow>().mainCamera = mainCamera;
 		newDroneObj.GetComponent<DroneData>().droneStatusButton.GetComponent<DroneCamFollow>().objToFollow = newDroneObj.transform.GetChild(1);
 
 		//set up drone status popup
-		RenderTexture rt = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
-		newDroneObj.GetComponent<DroneData>().dronePOVCam.targetTexture = rt;
-		DroneStatusPopupManager.instance.SetImage(rt);
+
 
 
 	}

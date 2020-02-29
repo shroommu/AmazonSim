@@ -21,7 +21,7 @@ public class DroneManager : MonoBehaviour {
 
 	public int maxDrones = 20;
 
-	public int droneCounter = 1;
+	public int droneCounter = 0;
 	
 	void Awake()
 	{
