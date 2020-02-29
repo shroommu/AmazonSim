@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class DroneStatusPopupManager : MonoBehaviour {
 
-	//TODO: Make this class dynamic (rendertexture changes based on which button is being hovered over)
-	public GameObject statusPopup;
-
 	public static DroneStatusPopupManager instance;
 
+	public GameObject statusPopup;
 	public RawImage ri;
+	public DisplayUIImageFill displayUIImageFill;
+	public Text droneNumber;
+	private bool canUpdate;
+	private IEnumerator updateFuel;
 
-	// Use this for initialization
 	void Awake()
 	{
 		if (instance == null)
@@ -25,17 +26,31 @@ public class DroneStatusPopupManager : MonoBehaviour {
 		}
 	}
 
-	public void SetActive(RenderTexture tex)
+	public void SetActive(RenderTexture tex, SO_Drone sO_Drone)
     {
+		droneNumber.text = "Drone " + sO_Drone.droneNumber;
 		statusPopup.SetActive(true);
 		ri.texture = tex;
-		
+		canUpdate = true;
+		updateFuel = UpdateFuel(sO_Drone);
+		StartCoroutine(updateFuel);
     }
 
 	public void SetInactive()
 	{
+		canUpdate = false;
+		StopCoroutine(updateFuel);
 		statusPopup.SetActive(false);
-		//ri.texture = null;
+	}
+
+	IEnumerator UpdateFuel(SO_Drone sO_Drone)
+	{
+		while (canUpdate)
+		{
+			print(sO_Drone.currentFuelLevel);
+			displayUIImageFill.Display(sO_Drone.currentFuelLevel/100);
+			yield return new WaitForSeconds(1);
+		}
 	}
 
 

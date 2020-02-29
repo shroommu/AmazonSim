@@ -74,6 +74,7 @@ public class DroneCreator : MonoBehaviour {
 		RenderTexture rt = new RenderTexture(256, 256, 16, RenderTextureFormat.ARGB32);
 		newDroneObj.GetComponent<DroneData>().dronePOVCam.targetTexture = rt;
 		newDroneObj.GetComponent<DroneData>().droneStatusButton = DroneStatusButtonManager.instance.CreateButton(rt);
+		newDroneObj.GetComponent<DroneData>().droneStatusButton.GetComponent<DroneStatusButton>().sO_Drone = newDrone;
 		newDroneObj.GetComponent<DroneData>().droneStatusButton.GetComponent<DroneCamFollow>().mainCamera = mainCamera;
 		newDroneObj.GetComponent<DroneData>().droneStatusButton.GetComponent<DroneCamFollow>().objToFollow = newDroneObj.transform.GetChild(1);
 
