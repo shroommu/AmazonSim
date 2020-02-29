@@ -247,22 +247,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1637658441400438
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4257428929538944}
-  - component: {fileID: 114801130625609440}
-  m_Layer: 0
-  m_Name: AlertManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1689911043649976
 GameObject:
   m_ObjectHideFlags: 1
@@ -529,19 +513,6 @@ Transform:
   m_Father: {fileID: 4695145327905094}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4257428929538944
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1637658441400438}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -184.35236, y: 421.20947, z: 772.1399}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4977376084003804}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4372569614561352
 Transform:
   m_ObjectHideFlags: 1
@@ -777,12 +748,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1593254290923928}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -19.92, y: 24.63, z: -140.83}
+  m_LocalPosition: {x: -129.24197, y: 98.5421, z: -311.99518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4519607257896908}
   - {fileID: 4897795568937686}
-  - {fileID: 4257428929538944}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -1201,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2a57c556f16f744ad46472e41f1b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sO_Drone: {fileID: 11400000, guid: 23a2ea26259289e44bf8a21126441364, type: 2}
+  sO_Drone: {fileID: 0}
   sO_Package: {fileID: 0}
   sO_Destination: {fileID: 0}
   droneMesh: {fileID: 4897795568937686}
@@ -1242,21 +1212,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114801130625609440
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1637658441400438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0be7905dab0f545aa5b5d30a972ef3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alertListLimit: 100
-  contentParent: {fileID: 0}
-  alertPrefab: {fileID: 1050551249681940, guid: 30d951538743f2342a8f4c5058fd85b6,
-    type: 2}
 --- !u!114 &114835685520128384
 MonoBehaviour:
   m_ObjectHideFlags: 1
