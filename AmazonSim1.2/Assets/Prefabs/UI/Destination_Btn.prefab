@@ -216,9 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85c9d6116f62555459d6bd807ee06a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneManager: {fileID: 0}
   destinationButton: {fileID: 0}
-  destination: {fileID: 0}
+  destinationMapButton: {fileID: 0}
 --- !u!114 &114246097197631342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,23 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d399719ce08d7044095ea758c2440d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneManager: {fileID: 0}
-  unityEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114686240728011844}
-        m_MethodName: Display
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114454589517144092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,10 +387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a796755c7f0b21e4c983427f83c1607d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneManager: {fileID: 0}
-  destinationManager: {fileID: 0}
   sO_Destination: {fileID: 0}
   sO_Package: {fileID: 0}
+  mapButton: {fileID: 0}
   destMapButton: {fileID: 0}
   titleText: {fileID: 114698491512051342}
   distanceText: {fileID: 114109156608116856}

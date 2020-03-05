@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SelectDestination : MonoBehaviour {
-	//public DroneManager droneManager;
+
 	public DestinationButton destinationButton;
 	public DestinationMapButton destinationMapButton;
 	private bool isMapButton;
 
 	public void Start()
 	{
-		//droneManager = GameObject.Find ("DroneManager").GetComponent<DroneManager>();
-		
 		//check to see what kind of destination button this is attached to
 		if(GetComponent<DestinationButton>() != null)
 		{

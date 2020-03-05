@@ -74,6 +74,10 @@ public class DroneCrash : MonoBehaviour {
         
         GameData.instance.IncreaseDestroyedDrones(1);
 
+        //make this drone number available to create again
+        DroneManager.instance.droneNumStack.Push(droneData.sO_Drone.droneNumber);
+        DroneManager.instance.droneNumStack = DroneManager.instance.SortStack(DroneManager.instance.droneNumStack);
+
         DroneManager.instance.drones.Remove(transform.parent.gameObject);
         Destroy(transform.parent.GetComponent<DroneData>().droneButton);
         Destroy(transform.parent.GetComponent<DroneData>().droneFuelUI);

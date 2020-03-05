@@ -6,26 +6,27 @@ using UnityEngine.Events;
 
 public class CalculateDistance : MonoBehaviour {
 
-	//public DroneManager droneManager;
-	public UnityEvent unityEvent;
-
-	void Start()
-	{
-		//droneManager = GameObject.Find("DroneManager").GetComponent<DroneManager>();
-	}
-
 	//calculates the roundtrip distance from the warehouse to the destination and back
 	public void Calculate()
 	{
-		// int dummyNumber = droneManager.currentDrone.GetComponent<DroneData>().sO_Drone.droneNumber;
-		// NavMeshPath dummyPath = new NavMeshPath();
-		// NavMeshAgent dummyAgent = droneManager.droneDummiesAir[dummyNumber].GetComponent<NavMeshAgent>();
+		int dummyNumber = DroneManager.instance.currentDrone.GetComponent<DroneData>().sO_Drone.droneNumber - 1;
+		NavMeshPath dummyPath = new NavMeshPath();
+		NavMeshAgent dummyAgent = DroneManager.instance.droneDummiesAir[dummyNumber].GetComponent<NavMeshAgent>();
 
-		// dummyAgent.CalculatePath(droneManager.currentDestination.position, dummyPath);
-		// dummyAgent.isStopped = true;
-		// dummyAgent.path = dummyPath;
+		print(dummyAgent.transform.position);
+		print(DroneManager.instance.currentDestination.position);
 
-		// droneManager.currentDistance = (Vector3.Distance(droneManager.droneDummiesAir[dummyNumber].position, droneManager.droneDummiesGround[dummyNumber].position) + dummyAgent.remainingDistance) * 2;
-		// unityEvent.Invoke();
+		dummyAgent.CalculatePath(DroneManager.instance.currentDestination.position, dummyPath);
+		dummyAgent.path = dummyPath;
+
+		print("DummyAgent Remaining Distance = " + dummyAgent.remainingDistance);
+
+		DroneManager.instance.UpdateCurrentDistance((Vector3.Distance(DroneManager.instance.droneDummiesAir[dummyNumber].position,
+			DroneManager.instance.droneDummiesGround[dummyNumber].position) * 2 + dummyAgent.remainingDistance) * 2);
+
+		//dummyAgent.path = null;
+
+		DroneSelectPanelManager.instance.UpdateDistanceText();
+		DroneSelectPanelManager.instance.UpdateFuelText();
 	}
 }
