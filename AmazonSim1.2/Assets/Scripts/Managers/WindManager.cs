@@ -47,7 +47,6 @@ public class WindManager : MonoBehaviour {
 		float currentSpeed = windSpeed;
 		float newSpeed = CalcNewWindSpeed();
 		float interp = 0;
-		print(newDirection);
 
 		while(interp < 1)
 		{

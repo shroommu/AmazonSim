@@ -53,6 +53,7 @@ public class DroneFuel : MonoBehaviour {
 				}
 
 				droneData.sO_Drone.currentFuelLevel -= windMultiplier * (fuelOverhead + (pgkWgt/weightMultiplier));
+				print(droneData.sO_Drone.currentFuelLevel);
 
 				if (droneData.sO_Drone.currentFuelLevel <= 0)
 				{
@@ -73,7 +74,6 @@ public class DroneFuel : MonoBehaviour {
 			}
 
 			useFuelRunning = false;
-			print("End of UseFuel");
 		}
 	}
 	public IEnumerator Refuel()

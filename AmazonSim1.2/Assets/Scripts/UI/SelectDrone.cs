@@ -8,12 +8,9 @@ public class SelectDrone : MonoBehaviour {
 	{ 
 		foreach (GameObject current in DroneManager.instance.drones)
 		{
-			print(current.GetComponent<DroneData>().sO_Drone);
-			print(GetComponent<DroneButton>().sO_Drone);
-
 			if (current.GetComponent<DroneData>().sO_Drone == GetComponent<DroneButton>().sO_Drone)
 			{ 
-			DroneManager.instance.currentDrone = current;
+				DroneManager.instance.currentDrone = current;
 			}
 		}
 	}

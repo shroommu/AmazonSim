@@ -6831,7 +6831,6 @@ MonoBehaviour:
   - {fileID: 1716600621}
   - {fileID: 1944962507}
   - {fileID: 246380989}
-  - {fileID: 0}
   - {fileID: 709361111}
   - {fileID: 233708082}
   - {fileID: 602559618}
@@ -6869,8 +6868,6 @@ MonoBehaviour:
   - {fileID: 1712381921}
   droneDummiesAir:
   - {fileID: 391219678}
-  - {fileID: 0}
-  - {fileID: 0}
   droneDummiesGround:
   - {fileID: 1764943648}
   - {fileID: 0}
@@ -11313,7 +11310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &402807797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21917,7 +21914,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000042533215, y: 0}
+  m_AnchoredPosition: {x: 0.00004942118, y: 0}
   m_SizeDelta: {x: 427.7, y: 319.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911269762
@@ -26441,11 +26438,6 @@ Prefab:
     - target: {fileID: 4402693713717164, guid: 351e97b65e1724944870d0aac180bc49, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 195060001270694484, guid: 351e97b65e1724944870d0aac180bc49,
-        type: 2}
-      propertyPath: m_Speed
-      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 351e97b65e1724944870d0aac180bc49, type: 2}

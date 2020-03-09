@@ -29,8 +29,6 @@ public class DroneHorizMovement : MonoBehaviour {
 
 			agent.path = path;
 
-			print(agent.remainingDistance);
-
 			StartCoroutine(CheckForPath(false));
 		}
 	}

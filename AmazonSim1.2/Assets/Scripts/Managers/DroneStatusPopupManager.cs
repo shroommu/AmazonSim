@@ -47,7 +47,6 @@ public class DroneStatusPopupManager : MonoBehaviour {
 	{
 		while (canUpdate)
 		{
-			print(sO_Drone.currentFuelLevel);
 			displayUIImageFill.Display(sO_Drone.currentFuelLevel/100);
 			yield return new WaitForSeconds(1);
 		}

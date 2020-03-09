@@ -50,7 +50,7 @@ public class DestinationManager : MonoBehaviour {
 
 		for(int i = 1; i < startingNumDests; i++)
 		{
-			int destNum = Random.Range(0, destinations.Count - 1);
+			int destNum = Random.Range(0, destinations.Count);
 			Generate(destNum);
 		}
 
@@ -63,8 +63,7 @@ public class DestinationManager : MonoBehaviour {
 		{
 			if(packages.Count > 0 && destinations.Count > 0)
 			{
-					int destNum = Random.Range(0, destinations.Count - 1);
-					print(destNum);
+					int destNum = Random.Range(0, destinations.Count);
 					Generate(destNum);
 			}
 			else

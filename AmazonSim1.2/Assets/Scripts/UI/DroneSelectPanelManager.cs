@@ -28,7 +28,7 @@ public class DroneSelectPanelManager : MonoBehaviour {
 
 	public void UpdateFuelText()
 	{
-		fuelText.text = string.Format("{0:0.00}%", (DroneManager.instance.currentDistance * DroneManager.instance.currentPackage.pkgWeight));
+		fuelText.text = string.Format("{0:0.00}%", (DroneManager.instance.currentDistance * DroneManager.instance.currentPackage.pkgWeight/5));
 	}
 
 }
